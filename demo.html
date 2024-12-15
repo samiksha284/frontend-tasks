@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Cafe Crunch</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        header {
+            background-color: #8B4513;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+       
+        nav {
+            background-color: #D2691E;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #8B4513;
+            color: white;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+        }
+
+        #menuList, #foodMenuList {
+            display: none;
+            margin-top: 15px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to Cafe Crunch</h1>
+    </header>
+
+    <nav>
+        <a href="#menu" onclick="showMenu()">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <p>Click below to view the menus:</p>
+            
+           
+            <div id="menuList">
+                <h3>Today's Offer</h3>
+                <ul>
+                    <li>Paneer Tikka Pizza (Medium) + Cold Coffee – ₹300 (Save ₹50)</li>
+                    <li>Chicken Tandoori Burger + Iced Tea – ₹180 (Save ₹30)</li>
+                    <li>Peri Peri Fries + Cold Coffee – ₹140 (Save ₹30)</li>
+                </ul>
+                <button onclick="showFoodMenu()">View Food Menu</button>
+            </div>
+
+           
+            <div id="foodMenuList">
+                <h3> Menu</h3>
+                <ul>
+                    <li>Veg Burger – ₹120</li>
+                    <li>Chicken Burger – ₹150</li>
+                    <li>Cold Coffee – ₹120</li>
+                    <li>Classic French Fries – ₹80</li>
+                    <li>Paneer Tikka Pizza (Medium) – ₹300</li>
+                </ul>
+            </div>
+        </section>
+
+       
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Cafe Crunch is your cozy corner for premium coffee and delightful snacks. We’ve been serving happiness since 2010.</p>
+        </section>
+
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Visit us at Main Street, Downtown. Call us at (555) 123-4567 or email us at <a href="mailto:info@cafecrunch.com">info@cafecrunch.com</a>.</p>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2024 Cafe Crunch. Serving smiles one cup at a time.</p>
+    </footer>
+
+   
+    <script>
+        function showMenu() {
+
+            const menuList = document.getElementById('menuList');
+            const foodMenuList = document.getElementById('foodMenuList');
+            menuList.style.display = 'block'; 
+            foodMenuList.style.display = 'none'; 
+        }
+
+        function showFoodMenu() {
+           
+            const menuList = document.getElementById('menuList');
+            const foodMenuList = document.getElementById('foodMenuList');
+            menuList.style.display = 'none'; 
+            foodMenuList.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
